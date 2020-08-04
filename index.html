@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script src="scripts/moment.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" src="../work-day-planner/assets/style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <style>
+    .past {
+      background-color: rgb(9, 117, 117);
+      color: white;
+    }
+
+    .present {
+      background-color: #ff6961;
+      color: white;
+    }
+
+    .future {
+      background-color: #77dd77;
+      color: white;
+    }
+  </style>
+
+  <body>
+    <header class="jumbotron border-bottom border-dark text-center">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <!-- This is where the time slots will go -->
+      <table class="table">
+        <tr id="9" class="hour">
+          <td>9a.m.</td>
+          <td>
+            <input class="form-control form-control-lg" type="text" />
+          </td>
+          <td>
+            <button data-hour="9" type="submit" class="btn btn-success">
+              Save
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td id="10" class="hour">10a.m.</td>
+          <td>
+            <input class="form-control form-control-lg" type="text" />
+          </td>
+          <td>
+            <button data-hour="10" type="submit" class="btn btn-success">
+              Save
+            </button>
+          </td>
+        </tr>
+        <tr id="11" class="hour">
+          <td>11a.m.</td>
+          <td>
+            <input class="form-control form-control-lg" type="text" />
+          </td>
+          <td>
+            <button data-hour="11" type="submit" class="btn btn-success">
+              Save
+            </button>
+          </td>
+        </tr>
+        <tr id="12" class="hour">
+          <td>12p.m.</td>
+          <td>
+            <input class="form-control form-control-lg" type="text" />
+          </td>
+          <td>
+            <button data-hour="12" type="submit" class="btn btn-success">
+              Save
+            </button>
+          </td>
+        </tr>
+        <tr id="13" class="hour">
+          <td>1p.m.</td>
+          <td>
+            <input class="form-control form-control-lg" type="text" />
+          </td>
+          <td>
+            <button data-hour="13" type="submit" class="btn btn-success">
+              Save
+            </button>
+          </td>
+        </tr>
+        <tr id="14" class="hour">
+          <td>2p.m.</td>
+          <td>
+            <input class="form-control form-control-lg" type="text" />
+          </td>
+          <td>
+            <button data-hour="14" type="submit" class="btn btn-success">
+              Save
+            </button>
+          </td>
+        </tr>
+        <tr id="15" class="hour">
+          <td>3p.m.</td>
+          <td>
+            <input class="form-control form-control-lg" type="text" />
+          </td>
+          <td>
+            <button data-hour="15" type="submit" class="btn btn-success">
+              Save
+            </button>
+          </td>
+        </tr>
+        <tr id="16" class="hour">
+          <td>4p.m.</td>
+          <td>
+            <input class="form-control form-control-lg" type="text" />
+          </td>
+          <td>
+            <button data-hour="16" type="submit" class="btn btn-success">
+              Save
+            </button>
+          </td>
+        </tr>
+        <tr id="17" class="hour">
+          <td>5p.m.</td>
+          <td>
+            <input class="form-control form-control-lg" type="text" />
+          </td>
+          <td>
+            <button data-hour="17" type="submit" class="btn btn-success">
+              Save
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script type="text/javascript" src="scripts/script.js"></script>
+  </body>
+</html>
