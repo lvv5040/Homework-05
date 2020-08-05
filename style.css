@@ -53,7 +53,7 @@ body {
   }
   
   .present {
-    background-color: #ff02c8;
+    background-color: #10a3bd;
     color: rgb(24, 165, 207);
   }
   
@@ -62,10 +62,10 @@ body {
     color: white;
   }
   .saveBtn {
-    border-left: 1px solid black;
+    border-left: 1px solid rgb(7, 131, 121);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #000000;
+    background-color: #116d74;
     color: rgb(10, 146, 170);
   }
   .saveBtn i:hover {
