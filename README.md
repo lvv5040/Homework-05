@@ -38,7 +38,7 @@ The following animation demonstrates the application functionality:
 
 You are required to submit the following for review:
 
-* The URL of the deployed application.
+* https://lvv5040.github.io/Homework-05/
 
 * https://github.com/lvv5040/Homework-05
 
