@@ -1,12 +1,9 @@
-  
-//global variables
 var scheduledHours = [];
 var availableHours = {};
 var m = moment();
 var newDay = moment().hour(0);
 var currentTime = m.hour();
 
-// adding clock to currentDay id
 function clock() {
   var dateString = moment().format('MMMM Do YYYY, h:mm:ss a');
   $('#currentDay').html(dateString);
@@ -14,7 +11,6 @@ function clock() {
 
 setInterval(clock, 1000);
 
-//generating textareas for scheduling
 for (var hour = 9; hour < 18; hour++) {
   scheduledHours.push(moment({hour}).format('h  a'));
   $('.container').append(`<div class='row time-block' data-time='${hour}'>
@@ -28,7 +24,7 @@ for (var hour = 9; hour < 18; hour++) {
                 <textarea class="form-control text-area"></textarea>
                 <div class='input-group-append'>
                   <button class='save-button d-flex justify-center align-center'>
-                    <i class='far fa-save fa-2x save-icon'></i>
+                  <i class="fas fa-sign-in-alt"></i>
                   </button>
                 </div>
               </div>
@@ -36,7 +32,6 @@ for (var hour = 9; hour < 18; hour++) {
           </div>`);
 }
 
-//Checking time to determine present, past, or future
 $.each($('.time-block'), function(index, value) {
   let dateHour = $(value).attr('data-time');
   if (Number(dateHour) === m.hour()) {
@@ -55,7 +50,6 @@ if (currentTime >=0 && currentTime < 9){
   localStorage.clear();
 }
 
-//Check for local storage to set value to the object and clearing if currentTime is between 12am and 9am
 if (localStorage.getItem('availableHours')) {
   availableHours = JSON.parse(localStorage.getItem('availableHours'));
 } else {
@@ -99,22 +93,18 @@ if (localStorage.getItem('availableHours')) {
   };
 }
 
-//set value of availableHours to equal the user input for each row
 $('.time-block').each(function() {
   $(this).find('.text-area').val(availableHours[$(this).attr('data-time')].value);
 });
 
-//save value to local storage on click
 $('.save-button').on('click', function(event){
   event.preventDefault();
 
-  //set availableHours time attribute
+  
   var timeValue = $(this).closest('.time-block').attr('data-time');
 
-  //set availableHours value attribute
     var textValue = $(this).closest('.time-block').find('.text-area').val();
     availableHours[timeValue].value = textValue;
 
-  //save user input in each object to local storage
     localStorage.setItem('availableHours', JSON.stringify(availableHours));
 });

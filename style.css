@@ -48,17 +48,17 @@ body {
   }
   
   .past {
-    background-color: hsl(217, 96%, 51%);
+    background-color: hsl(71, 81%, 50%);
     color: white;
   }
   
   .present {
     background-color: #10a3bd;
-    color: rgb(24, 165, 207);
+    color: white;
   }
   
   .future {
-    background-color: #000000;
+    background-color: #0aa569;
     color: white;
   }
   .saveBtn {
